@@ -1,11 +1,10 @@
 /* global $ */
 $("document").ready(function() {
     // appending anything to the body, ids or classes
-    $("#mainContent").append("<p>The page just loaded!</p>");
+    $("#uploaedtxt").append("<em>The page just loaded!</em>");
     
     //Appending h2 and p
-    $("body").append("<h1 class='headers'>Appending a Heading and Paragraph</h1>");
-    $("body").append("<em class='includedbyjq'>Including text thru jquery</em>");
+    $("body").prepend("<h1 class='headers'>Prepending a Heading from jQuery</h1>");
 
     // adding style to tags, ids or classes
     $("p.b").css("border", "2px solid green");
@@ -49,11 +48,11 @@ $("document").ready(function() {
     
     //Creating and changing page content
     var newP = $("<p>");
-        newP.append("<em>Hello There</em>");
+        newP.append("<em> 🤓 Hello There</em>");
         // inserts the text you append to this id
         $("#example").html(newP);
         //add text before the id
-        $("#creation").prepend("Watch This! ");
+        $("#creation").prepend("(jQuery Text!) ");
         // change the existing content
         //$("#example").html("<h2>This is a new H2</h2>");
         //this creates the normal text including the tags
@@ -75,7 +74,9 @@ $("document").ready(function() {
     //$("#alter").empty();
     //$("#alter p#altering2, #alter p#altering4").remove();
     //$("#alter p#altering2, #alter p#altering4").detach();
-    $("<div>replaced</div>").replaceAll("#alter p[id]");
+    $("<div class=\"replace\">replaced</div>").replaceAll("#alter p[id]");
+    $(".replace").css("color", "red");
+    $(".replace").css("fontWeight", "bold");
     //$("#alter p[id]").replaceWith("<div>replaced</div>");
    
     //function in the bottom
@@ -109,14 +110,11 @@ $("document").ready(function() {
             });
     
     // Add a title attribute to all of the images
-    $("a").attr("title", "Photo by some photographer");
-    
+    $("a").attr("title", "Snapshots");
     // Make each image open in a new window
     $("a").attr("target", "_blank");
-    
     // Remove the href from the <a> tags, making images unclickable
     //$("a").removeAttr("href");
-    
     // Modify multiple attributes at once
     //$("img").attr({ src: "assests/img/3.png", title: "Quotes this!" });
     
@@ -133,6 +131,7 @@ $("document").ready(function() {
     
     //append text for data-type 
     $("#travers p[data-type='flavor']").append(" (flavor)");
+    
     //events are triggered
     $("#eventing").on("mousemove", onMouseOver);
     $("#eventing").on("click", onMouseClick);
@@ -140,7 +139,7 @@ $("document").ready(function() {
     
     //CSS setting Properties
     $("#setProp").click(function(evt) {
-        $("#property p").css("text-decoration", "overline")
+        $("#property p").css("text-decoration", "underline")
                         .css("font-size", "+=1pt");
     });
 
@@ -169,16 +168,16 @@ $("document").ready(function() {
     //turn on n off highlight enter text after click
     $("#evtBind").on("click", function(evt) {
         $("#evtBind").off("mouseover mouseleave", highlight);
-        $("#evtBind").html("<p>You shut off the hover effect!</p>");
+        $("#evtBind").html("<p>😟 Awwww....You shut off the hover effect 🤔</p>");
         $("#evtBind").removeClass("highlighting");
     });
 
-    $("#textEntry").on("keypressed", function(evt) {
+    $("#textEntry").on("keypress", function(evt) {
         $("#keyPressed").text(String.fromCharCode(evt.charCode));
     });
     
     //Helpers Binding
-    $("#bindHelpers").hover(highlight, highlight);
+    $("#bindHelpers").hover(highlighted, highlighted);
     
     $("#bindHelpers").click(fnClick1);
 
@@ -199,15 +198,15 @@ $("document").ready(function() {
     });
     
     //Event Object
-    $("#Div1").on("click dblclick", { name: "Div 1" }, function(evt) {
+    $("#box1").on("click dblclick", { name: "Box 1" }, function(evt) {
         updateEventDetails(evt);
         evt.stopPropagation();
     });
-    $("#Div2").on("click dblclick", { name: "Div 2" }, function(evt) {
+    $("#box2").on("click dblclick", { name: "Box 2" }, function(evt) {
         updateEventDetails(evt);
         evt.stopPropagation();
     });
-    $("#Div3").on("click dblclick", { name: "Div 3" }, function(evt) {
+    $("#box3").on("click dblclick", { name: "Box 3" }, function(evt) {
         updateEventDetails(evt);
         evt.stopPropagation();
     });
@@ -247,7 +246,7 @@ function onMouseLeave(evt) {
 }
 
 //Helpers binding
-function highlight() {
+function highlighted() {
     $("#bindHelpers").toggleClass("highlighted");
 }
 function fnClick1() {

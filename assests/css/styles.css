@@ -1,13 +1,12 @@
 body {
-	font-family: sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #3d3d3f;
 }
 .headers {
+	font-weight: bold;
 	color: #670202;
 }
 #mainContent {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: small;
-	font-weight: bold;
 	background-color: #E3F0FB;
 	border-radius: 4px;
 	padding: 10px;
@@ -18,7 +17,7 @@ body {
 	background-color: #5AE8BE;
 }
 #eventing {
-	padding: 5px;
+	padding: 15px;
 	background-color: #5AC4E8;
 }
 #testDiv {
@@ -33,12 +32,20 @@ body {
 #travers {
     margin-bottom: 2em;
 }
-#quotesInImgs {
-    text-align: center;
-}
 #quotesInImgs img {
 	margin: 0.313em 0.313em;
-	width: 300px;
+}
+#quotesInImgs .fir img {
+	width: 168px;
+}
+#quotesInImgs .sec img {
+	width: 200px;
+}
+#quotesInImgs .thir img {
+	width: 214px;
+}
+#quotesInImgs .fou img {
+	width: 220px;
 }
 .space {
 	margin: 1.625em 0;
@@ -52,12 +59,13 @@ body {
 #posit {
 	background: #FFD8C4;
 	padding: 2em 4em;
+	margin-bottom: 0.625em;
 }
 .highlighting {
     background-color: #e40000;
 }
 .highlighted {
-	background: blue;
+	background-color: blue;
 }
 .bind_box {
 	padding: 1em;
@@ -72,4 +80,17 @@ body {
 }
 .inputdiv {
     margin-top: 1em;
+}
+#createCntdiv p {
+	border: 0;
+}
+button {
+	padding: 10px;
+	background: blue;
+	color: white;
+	border: orange;
+	border-radius: 6px;
+}
+.pressedkey {
+	color: black;
 }

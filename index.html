@@ -2,55 +2,52 @@
 <html lang="en-us">
 
 <head>
-<meta charset="utf-8">
-<title>Hello...jq</title>
-<link rel="stylesheet" href="assests/css/styles.css" type="text/css" />
+    <meta charset="utf-8">
+    <title>Hello...jq</title>
+    <link rel="stylesheet" href="assests/css/styles.css" type="text/css" />
 
 </head>
 
 <body>
+
+    <div class="space"></div>
+
+    <h1>Changing text content</h1>
     <div id="example">Text here is from html and not from jquery</div>
-    
+
+    <h3 id="creation">Text from HTML</h3>
+
     <div class="space"></div>
-    
-    <h3 id="creation">Gonna Freak you out</h3>
-    
-    <div class="space"></div>
-    
+
+    <h1>Adding attributes</h1>
     <div id="quotesInImgs">
-        <a href="assests/img/1.png"><img src="assests/img/1.png" alt="Quote 1" /></a>
-        <a href="assests/img/2.png"><img src="assests/img/2.png" alt="Quote 2" /></a>
-        <a href="assests/img/3.png"><img src="assests/img/3.png" alt="Quote 3" /></a>
-        <a href="assests/img/4.png"><img src="assests/img/4.png" alt="Quote 4" /></a>
+        <a class="fir" href="assests/img/1.png"><img src="assests/img/1.png" alt="Quote 1" /></a>
+        <a class="sec" href="assests/img/2.png"><img src="assests/img/2.png" alt="Quote 2" /></a>
+        <a class="thir" href="assests/img/3.png"><img src="assests/img/3.png" alt="Quote 3" /></a>
+        <a class="fou" href="assests/img/4.png"><img src="assests/img/4.png" alt="Quote 4" /></a>
     </div>
-    
+
     <div class="space"></div>
-    
+
+    <h1>Events on buttons to Create, Change and Change All text</h1>
+    <div id="createCntdiv">
+        <p id="content1">Waiting to be...</p>
+        <p id="content2">Waiting to be...</p>
+        <p id="content3">Waiting to be...</p>
+        <p id="content4">Waiting to be...</p>
+        <p id="content5">Waiting to be...</p>
+    </div>
     <button id="create">Create Content</button>
     <button id="change">Change Content</button>
     <button id="changeAll">Change All</button>
-    <div id="createCntdiv">
-        <p id="content1">Text is from the HTML</p>
-        <p id="content2">Text is from the HTML</p>
-        <p id="content3">Text is from the HTML</p>
-        <p id="content4">Text is from the HTML</p>
-        <p id="content5">Text is from the HTML</p>
-    </div>
-    
+
     <div class="space"></div>
-    
-    <h1>Styling tags and classes</h1>
+
+    <h1>Styling tags, classes and triggering with filters</h1>
     <div id="mainContent">
-        <div class="selectors">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-        Delectus, voluptatibus, voluptatem perferendis similique rerum explicabo magnam consequuntur ut. Nesciunt, 
-        quam aspernatur deserunt hic incidunt eos harum magni minima odit impedit.
+        <div class="selectors">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatibus, voluptatem perferendis similique rerum explicabo magnam consequuntur ut. Nesciunt, quam aspernatur deserunt hic incidunt eos harum magni minima odit impedit.
         </div>
     </div>
-    
-    <div id="eventing"></div>
-    
-    <div class="space"></div>
-    
     <div id="extras">
         <p class="abc">Lorem ipsum dolor sit amet</p>
         <p id="ab1">Lorem ipsum dolor sit amet</p>
@@ -61,9 +58,27 @@
         <p id="abc4">Lorem ipsum dolor sit amet</p>
         <p id="abc5">Lorem ipsum dolor sit amet</p>
     </div>
-    
+      <h2 class="heading">First Heading</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, quos, atque natus omnis minima maxime eos placeat! Odio, quasi itaque rerum incidunt maxime sed consequatur omnis ipsum rem atque ab.</p>
+        <h2>First Heading</h2>
+        <p>Voluptas, dolore doloribus saepe fugiat. Iusto, deserunt, iure, obcaecati, quibusdam accusantium neque eius doloremque est libero alias in qui esse dolorem eligendi odio voluptatem aliquid ratione beatae debitis corporis nesciunt.</p>
+    <div id="extra">
+        <p class="a">Text 1</p>
+        <p id="a1">Text 2</p>
+        <p class="b">Text 3</p>
+        <p id="a2" lang="en-us">Text 4</p>
+        <p id="a3" lang="en-gb">Text 5</p>
+        <p id="b1">Text 6</p>
+    </div>
+
     <div class="space"></div>
-    
+
+    <h1>Adding click, mouseover, mouseleave events page X&Y coordinates</h1>
+    <div id="eventing"></div>
+
+    <div class="space"></div>
+
+    <h1>Selecting all paragraphs</h1>
     <div id="lorem">
         <p id="c1">Lorem ipsum dolor sit ame</p>
         <p id="c2">Lorem ipsum dolor sit ame</p>
@@ -71,41 +86,33 @@
         <p id="c4">Lorem ipsum dolor sit amet</p>
         <p id="c5">Lorem ipsum dolor sit amet 2016</p>
     </div>
-    
+
     <div class="space"></div>
-    
+
+    <h1>Altering Text and replacing</h1>
     <div id="alter">
-        <p class="altering1">1.Iusto, deserunt, iure, obcaecati, quibusdam.</p>
-        <p id="altering2">2.Iusto, deserunt, iure, obcaecati, quibusdam.</p>
-        <p class="altering3">3.Iusto, deserunt, iure, obcaecati, quibusdam.</p>
-        <p id="altering4">4.Iusto, deserunt, iure, obcaecati, quibusdam.</p>
-        <p class="altering5">5.Iusto, deserunt, iure, obcaecati, quibusdam.</p>
+        <p class="altering1">1.Lorem ipsum dolor sit ame.</p>
+        <p id="altering2">2.Lorem ipsum dolor sit ame.</p>
+        <p class="altering3">3.Lorem ipsum dolor sit ame.</p>
+        <p id="altering4">4.Lorem ipsum dolor sit ame.</p>
+        <p class="altering5">5.Lorem ipsum dolor sit ame.</p>
     </div>
-    
+
     <div class="space"></div>
-    
+
+    <h1>Setting CSS properties</h1>
     <div id="property">
-        <p class="property0">This is paragraph 1</p>
-        <p id="property1">This is paragraph 2</p>
-        <p class="property2">This is paragraph 3</p>
-        <p id="property3">This is paragraph 4</p>
-        <p id="property4">This is paragraph 5</p>
+        <p class="property0">This text needs a makeover, don't you think?!</p>
     </div>
     <button id="setProp">Set Property</button>
     <button id="setProps">Set Properties</button>
     <button id="addCl">Add Class</button>
     <button id="rmCl">Remove Class</button>
     <button id="toggleCl">Toggle Class</button>
-    
+
     <div class="space"></div>
-    
-    <h2 class="heading">First Heading</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, quos, atque natus omnis minima maxime eos placeat! Odio, quasi itaque rerum incidunt maxime sed consequatur omnis ipsum rem atque ab.</p>
-    <h2>First Heading</h2>
-    <p>Voluptas, dolore doloribus saepe fugiat. Iusto, deserunt, iure, obcaecati, quibusdam accusantium neque eius doloremque est libero alias in qui esse dolorem eligendi odio voluptatem aliquid ratione beatae debitis corporis nesciunt.</p>
-    
-    <div class="space"></div>
-    
+
+    <h1>Positioning CSS</h1>
     <div id="posit">
         Example DIV Element
     </div>
@@ -117,25 +124,15 @@
     <div><span>outerWidth: </span><span id="outerW"></span></div>
     <div><span>offset: </span><span id="offset"></span></div>
     <div><span>position: </span><span id="position"></span></div>
-    
+
     <div class="space"></div>
     
-    <div id="extra">
-        <p class="a">Text 1</p>
-        <p id="a1">Text 2</p>
-        <p class="b">Text 3</p>
-        <p id="a2" lang="en-us">Text 4</p>
-        <p id="a3" lang="en-gb">Text 5</p>
-        <p id="b1">Text 6</p>
-    </div>
-    
-    <div class="space"></div> 
-    
+    <h1>Animate Block</h1>
     <button id="go">Go</button>
     <div id="testDiv"></div>
-    
+
     <div class="space"></div>
-    
+
     <div id="insertCnt">
         <p class="flavor1">My name is:</p>
         <p class="flavor2">Henry Villa</p>
@@ -143,24 +140,31 @@
         <p class="flavor4">iam</p>
         <p class="flavor5">Lorem ipsum dolor</p>
     </div>
-    
+
     <div class="space"></div>
-    
+
+    <h1>Mouseover bind and unbind</h1>
     <div id="evtBind" class="bind_box">Click to unbind the mouseover.</div>
-    <p>Type in this text field</p>
-    <input id="textEntry" type="text"/>
-    <p>Last character typed: <span id="keyPressed"></span></p>
     
     <div class="space"></div>
     
+    <h1>Key presses with on event</h1>
+    <p>Type in this text field</p>
+    <input id="textEntry" type="text" />
+    <p>Last character typed: <span class="pressedkey" id="keyPressed"></span></p>
+
+    <div class="space"></div>
+
+    <h1>Bind, Click and Double Click</h1>
     <div id="bindHelpers" class="bind_box">Hover, Click or Double Click and Resize window</div>
 
     <div class="space"></div>
-    
-    <div id="Div1" class="smallbox inline">Mouse over and click here (Div1)</div>
-    <div id="Div2" class="smallbox inline">Mouse over and click here (Div2)</div>
-    <div id="Div3" class="smallbox inline">Mouse over and click here (Div3)</div>
-    <div class="inputdiv">Type some text here: <input type="text" id="input1"></div>
+
+    <h1>Event objects</h1>
+    <div id="box1" class="smallbox inline">Mouse over and click on Box 1</div>
+    <div id="box2" class="smallbox inline">Mouse over and click on Box 2</div>
+    <div id="box3" class="smallbox inline">Mouse over and click on Box 3</div>
+    <div class="inputdiv">Type any key here: <input type="text" id="input1"></div>
     <div id="eventDetails">
         <h3>Event Details</h3>
         <div class="detailLine">
@@ -168,7 +172,7 @@
             <span class="lineitem">Key/Button: </span><span class="lineitem" id="evtWhich"></span>
         </div>
         <div class="detailLine">
-            <span class="lineitem">Target: </span><span class="lineitem" id="evtTarget"></span>
+            <span class="lineitem">Id: </span><span class="lineitem" id="evtTarget"></span>
             <span class="lineitem">Related Target: </span><span class="lineitem" id="evtRelated"></span>
         </div>
         <div class="detailLine">
@@ -184,9 +188,10 @@
             <span class="lineitem">data: </span><span class="lineitem" id="evtData"></span>
         </div>
     </div>
-    
+
     <div class="space"></div>
-    
+
+    <h1>Traversing</h1>
     <div id="travers">
         <p data-type="flavor">Lorem ipsum dolor</p>
         <p id="basic1">Lorem ipsum dolor</p>
@@ -194,8 +199,9 @@
         <p data-type="flavor">Lorem ipsum dolor</p>
         <p id="basic5" data-type="flavor">Lorem ipsum dolor</p>
     </div>
-    
-<script type="text/javascript" src="assests/js/jquery.min.js"></script>
-<script type="text/javascript" src="assests/js/scripts.js"></script>
+
+    <script type="text/javascript" src="assests/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assests/js/scripts.js"></script>
 </body>
+
 </html>
