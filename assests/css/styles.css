@@ -94,3 +94,20 @@ button {
 .pressedkey {
 	color: black;
 }
+#imgholder div img {
+   	height: auto;
+    width: 100%; 
+}
+#imgholder {
+	height: 48.000em;
+}
+#imgholder div {
+    position:absolute;
+    z-index: 0;
+}
+#imgholder .previous {
+    z-index: 1;
+}
+#imgholder .current {
+    z-index: 2;
+}

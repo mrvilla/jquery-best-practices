@@ -4,7 +4,7 @@ $("document").ready(function() {
     $("#uploaedtxt").append("<em>The page just loaded!</em>");
     
     //Appending h2 and p
-    $("body").prepend("<h1 class='headers'>Prepending a Heading from jQuery</h1>");
+    $("body .storage").prepend("<h2 class='headers'>List</h2>");
 
     // adding style to tags, ids or classes
     $("p.b").css("border", "2px solid green");
@@ -225,7 +225,45 @@ $("document").ready(function() {
 
     $("#input1").keypress(updateEventDetails);
     
+    //Image rotator
+    $(function() {
+        // create the image rotator
+        setInterval("rotateImages()", 3000);
+    });
+    
+    // select the H1 - these contain the text for the links
+    var headings = $("body h1");
+    // create a new empty UL tag to hold the list of links
+    var list = $("<ul id='contents'>");
+    // we need a counter to make sure each anchor tag has a unique name
+    var cAnchorCount = 0;
+
+    // for each one of the H2s, create a named anchor to link to and a link for the list
+    headings.each(function(indx, elem) {
+        // set the HTML of this H2 to contain the new anchor tag that is the link destination
+        $(this).html("<a name='contents" + cAnchorCount + "'></a>" + $(this).html());
+        // now make a new LI tag for the list that links to the anchor tag and has the text of the H2
+        list.append($("<li><a href='#contents" + cAnchorCount++ + "'> " + $(this).text() + "</a></li>"));
+    });
+    // when we're done, insert the list after the H1 heading that lists the specials
+    $("body .sidebar").append(list);
+    
 });
+
+//rotate images
+function rotateImages() {
+    var curPhoto = $('#imgholder div.current');
+    var nxtPhoto = curPhoto.next();
+    if (nxtPhoto.length == 0)
+        nxtPhoto = $('#imgholder div:first');
+
+    curPhoto.removeClass('current').addClass('previous');
+    nxtPhoto.css({ opacity: 0.6 }, 2000).addClass('current')
+            .animate({ opacity: 1.0 }, 2000,
+                        function() {
+                            curPhoto.removeClass('previous');
+                        });
+}
 
 //Binding Event highlight
 function highlight(evt) {
