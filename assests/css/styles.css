@@ -6,6 +6,14 @@ body {
 	font-weight: bold;
 	color: #670202;
 }
+.mainTitle {
+	font-size: 250%;
+	margin: 0.313em auto 0.625em;
+	color: teal;
+}
+#contents {
+    list-style-type: decimal-leading-zero;
+}
 #mainContent {
 	background-color: #E3F0FB;
 	border-radius: 4px;

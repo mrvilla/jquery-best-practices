@@ -1,5 +1,6 @@
 /* global $ */
 $("document").ready(function() {
+    "use strict";
     // appending anything to the body, ids or classes
     $("#uploaedtxt").append("<em>The page just loaded!</em>");
     
@@ -12,7 +13,7 @@ $("document").ready(function() {
     
     // Filters for triggering 
     $("p:first").css("border", "3px solid blue");
-    $("h2:not(.heading)").css("color", "blue");
+    $("h4:not(.heading)").css("color", "blue");
     $("#extras p:last").css("border", "2px solid pink");
     //$("#extras p:even").css("border", "2px solid darkolivegreen");
     //$("#extras p:odd").css("border", "2px solid blueviolet");
